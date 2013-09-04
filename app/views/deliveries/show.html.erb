@@ -1,0 +1,23 @@
+
+
+
+<p>Deliveries for <%= @current_delivery_date.strftime('%A %B %d %Y') %></p>
+
+
+
+<% for delivery in @deliveries %>
+     <p><%= delivery[0].to_s %><br/>
+     <%= delivery[1].to_s %><br/>
+     <%= delivery[2].to_s %><br/>
+     <%= "Adults  #{delivery[3].to_s}" %><br/>
+     <%= "Children #{delivery[4].to_s}" %><br/>
+     <%= "Delivery Notes #{delivery[5].to_s}" %><br/>
+     <%= "Comments #{delivery[6].to_s}" %><br/>
+     <% v = [] %>
+     <% delivery[7].each do |vin| %>
+                      <% v << vin.first_name.to_s + " " + vin.last_name.to_s %>
+     <% end %>
+     
+     <%= "Vincentians #{v.join(", ")}" %></p>
+    
+<% end %>

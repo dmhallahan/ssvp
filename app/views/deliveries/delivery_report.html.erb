@@ -1,0 +1,18 @@
+Team Report
+
+
+<% @report.each do |group| %>
+<% group.each do |g| %>
+Each group<br/>
+  <% g[0].each do |e| %>
+      Vincentian<br/>
+      <%= debug(e)%>
+  <% end %>
+  <% g[1].each do |f| %>
+      Delivery/Recip<br/>
+      <%= debug(f)%>
+  <% end %>
+<% end %>
+<br/>
+<% end %>
+

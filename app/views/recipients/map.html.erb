@@ -1,0 +1,46 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+   
+
+    
+    <script type="text/javascript">
+    
+      //populate javascript variables from the controller variables
+      var destination_address = "<%= @destination %>";
+      var origin_address = "<%= @origin %>";
+    
+    </script>
+    
+    <% if RAILS_ROOT == 'c:/Rails/ssvp' %>
+      <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script>
+    <% else %>
+      <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAKxdghs44-6Zbwux-M2j8PxQM_5f4oJ3bX2DkBRFzPOOnN9rvxhRVhIPXANGZpGerQlbk-Qjqi8TWfQ" type="text/javascript"></script>
+    <%end%>
+    
+    <%= javascript_include_tag "google_map_recipients" %>
+      
+    <title>Map Deliveries</title>
+	
+  </head>
+
+  <body onload="initialize()"; onunload="GUnload()">
+  
+
+
+  <div id="map_canvas" style="width: 600px; height: 600px"></div>
+  <div id="directions_canvas" style="width: 600px;"></div>
+  <div style="float: right;"><%=link_to_function 'Print', "window.print()" %></div>
+	  
+
+
+  </body>
+  
+</html>
+
+
+
+
+

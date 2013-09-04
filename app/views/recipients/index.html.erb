@@ -1,0 +1,82 @@
+<script type="text/javascript">
+
+       
+  //gets selected row from recipients grid and submits it to map action via the hidden input recipient_id
+  function submitHidden() {
+       var myid = jQuery("#recipients").getGridParam('selrow');
+       document.hiddenForm.recipient_id.value=myid;
+       if (myid == null ) {
+            alert("Select a recipient to map."); }
+      else {
+            document.hiddenForm.submit(); }
+            }
+
+ 
+	
+	
+</script>
+
+  <% content_for :instructions do %>
+    <div class="text">Create recipients by clicking the '+' sign below the table.</div>
+  <% end %>
+
+
+
+
+
+<%= jqgrid("Recipients", "recipients", "/recipients",
+	[
+		{ :field => "first_name", :label => "First Name", :editable => true, :width => 80,
+        :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true }    },
+		{ :field => "last_name", :label => "Last Name", :editable => true, :width => 80,
+        :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true }     },
+		{ :field => "phone_number", :label => "Phone", :editable => true, :width => 90 },
+    { :field => "address", :label => "Address", :editable => true, :width => 200, :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true } },
+    { :field => "apt", :label => "Apt", :editable => true, :width => 40, :resizable => true },
+    { :field => "city", :label => "City", :editable => true, :width => 80 },
+    { :field => "adults", :label => "Adults", :editable => true, :width => 35, :resizable => false },
+    { :field => "children", :label => "Children", :editable => true, :width => 35, :resizable => false },
+    { :field => "notes", :label => "Notes", :editable => true, :edittype => "textarea", :editoptions => { :rows => 5, :cols => 35}, :width => 200  },
+    { :field => "delivery_notes", :label => "Delivery Notes", :editable => true, :edittype => "textarea", :editoptions => { :rows => 5, :cols => 35 }, :width => 220  }
+	],
+	{ :master_details => true, :details_url => "/recipients/deliveries", :details_caption => "Deliveries", :add => true, 
+          :edit => true, :inline_edit => false, :delete => true, :edit_url => "/recipients/post_data", :error_handler => "afterSubmit",
+            :sort_column => "last_name", :sort_order => 'asc',:rows_per_page => 100, :rownumbers => true }
+) %>
+<br/>
+
+<div style="float: left;">
+<%= jqgrid("Deliveries", "recipients_details", "/recipients/deliveries",
+	[
+		{ :field => "delivery_date", :label => "Delivery Date", :align => 'center' },
+    { :field => "bags", :label => "Bags", :width => 35, :align => 'center' },
+    { :field => "comment", :label => "Comment", :width => 500, :align => 'center' }
+	],
+  { :sort_column => "delivery_date", :sort_order => 'desc', :rownumbers => true}) %>
+</div>
+
+
+
+<div class="bubble" style="margin-left: 20px; float: left;">
+      <form name="hiddenForm" id="hiddenForm" action="recipients/map" method="get"> 
+        <div class="bubble-head" style="width: 263px;">Map</div>
+        <div class="bubble-body">
+          <p>
+            <%=label_tag 'from', 'Enter the start address' %><br>
+            <%=text_field_tag 'from_destination', @from_destination, :size => 38 %><br>
+            <a id="map_link" href="javascript: submitHidden();">Map Recipient's Location</a>
+          </p>
+          <input type="hidden" name="recipient_id" value="" id="recipient_id" />
+        </div>
+      </form>
+  
+</div>
+
+
+
+
+
+
+
+
+

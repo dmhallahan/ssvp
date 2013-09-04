@@ -1,0 +1,18 @@
+<% content_for :instructions do %>
+    <div class="text">Edit teams</div>
+<% end %>
+
+<p>Remove vincentians from a recipient by selecting the row and clicking the trash can.</p>
+
+
+<%= jqgrid("Teams", "teams", "/teams",
+	[
+		{ :field => "delivery_id", :label => "Delivery Date", :editable => true },
+    { :field => "recipient", :label => "Recipient", :editable => true },
+    { :field => "vincentian_id", :label => "Vincentian", :editable => true },
+		{ :field => "team_num", :label => "Team Number", :editable => true }
+	],
+	{  :delete => true, :edit_url => "/teams/post_data", :error_handler => "afterSubmit", :rows_per_page => 100,
+    :height => 400, :rownumbers => true  }
+) %>
+

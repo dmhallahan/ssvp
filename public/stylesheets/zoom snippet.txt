@@ -1,0 +1,5 @@
+    <% unless controller.action_name == "map"%>
+    <a href="javascript:deleteCookie('incrSize');deleteCookie('incrStyleSize');changeFontSize(0, 0, true); window.location.reload();", class="text">Reset</a>
+    <A HREF="javascript:decreaseFontSize();" class="text">t-</A>
+    <A HREF="javascript:increaseFontSize();" class="text">T+</A>
+    <% end %>

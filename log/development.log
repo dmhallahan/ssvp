@@ -1,0 +1,935 @@
+# Logfile created on Mon Aug 26 23:25:15 -0400 2013  [4;36;1mRecipient Load (78.5ms)[0m   [0;1mSELECT * FROM "recipients" [0m
+  [4;35;1mRecipient Load (4.7ms)[0m   [0mSELECT * FROM "recipients" [0m
+  [4;36;1mDelivery Load (1.3ms)[0m   [0;1mSELECT * FROM "deliveries" ORDER BY deliveries.id DESC LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-03 23:16:43) [GET]
+
+ActionController::RoutingError (No route matches "/issues" with {:method=>:get}):
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-03 23:16:45) [GET]
+
+ActionController::RoutingError (No route matches "/assets/rails.png" with {:method=>:get}):
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:16:53) [GET]
+  [4;36;1mRecipient Load (0.9ms)[0m   [0;1mSELECT * FROM "recipients" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" [0m
+Rendering template within layouts/application
+Rendering recipients/index
+Completed in 501ms (View: 493, DB: 1) | 200 OK [http://localhost/recipients]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:16:54) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"100", "sidx"=>"last_name", "sord"=>"asc", "nd"=>"1378264614093"}
+  [4;36;1mRecipient Load (4.4ms)[0m   [0;1mSELECT * FROM "recipients" ORDER BY last_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" ORDER BY last_name asc [0m
+Completed in 84ms (View: 1, DB: 5) | 200 OK [http://localhost/recipients?q=1&_search=false&nd=1378264614093&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:16:54) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"10", "sidx"=>"delivery_date", "sord"=>"desc", "nd"=>"1378264614147"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/recipients/deliveries?q=1&_search=false&nd=1378264614147&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-03 23:17:06) [GET]
+  [4;36;1mVincentian Load (0.6ms)[0m   [0;1mSELECT * FROM "vincentians" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" [0m
+Rendering template within layouts/application
+Rendering vincentians/index
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/vincentians]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-03 23:17:06) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"100", "sidx"=>"last_name", "sord"=>"asc", "nd"=>"1378264626779"}
+  [4;36;1mVincentian Load (1.0ms)[0m   [0;1mSELECT * FROM "vincentians" ORDER BY last_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" ORDER BY last_name asc [0m
+Completed in 61ms (View: 1, DB: 1) | 200 OK [http://localhost/vincentians?q=1&_search=false&nd=1378264626779&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-03 23:17:08) [GET]
+
+NameError (uninitialized constant DeliveriesController::Tools):
+  app/controllers/deliveries_controller.rb:3
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (24.9ms)
+Rendered rescues/_request_and_response (75.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-09-03 23:30:50) [GET]
+
+TypeError (wrong argument type String (expected Module)):
+  app/controllers/deliveries_controller.rb:3:in `include'
+  app/controllers/deliveries_controller.rb:3
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/david/.rvm/rubies/ruby-1.8.7-p371/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:37:15) [GET]
+  [4;36;1mDelivery Load (0.5ms)[0m   [0;1mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" [0m
+Rendering template within layouts/application
+Rendering deliveries/index
+  [4;36;1mRecipient Load (4.5ms)[0m   [0;1mSELECT * FROM "recipients" [0m
+Completed in 40ms (View: 25, DB: 5) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:37:16) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"100", "sidx"=>"delivery_date", "sord"=>"desc", "nd"=>"1378265836260"}
+  [4;35;1mDelivery Load (10.1ms)[0m   [0mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" ORDER BY delivery_date desc [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 228) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 203) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 216) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 137) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 255) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 256) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 253) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 252) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 213) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 254) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 142) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 132) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 197) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 251) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 143) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 250) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 246) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 227) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 247) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 248) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 249) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 244) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 233) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 195) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 163) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 130) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 205) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 243) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 189) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 200) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 125) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 112) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 240) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 239) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 104) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 238) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 174) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 173) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 181) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 172) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 187) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 183) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+Completed in 154ms (View: 1, DB: 23) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378265836260&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:39:28) [GET]
+  [4;35;1mDelivery Load (0.5ms)[0m   [0mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;36;1mRecipient Load (0.8ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (120,123,128,124,121,119,118,116,115,114,113,112,111,110,130,109,108,107,106,104)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id [0m
+Rendering template within layouts/application
+Rendering teams/new
+Completed in 71ms (View: 56, DB: 2) | 200 OK [http://localhost/teams/new]
+
+
+Processing TeamsController#vincentians_select (for 127.0.0.1 at 2013-09-03 23:39:28) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"100", "sidx"=>"first_name", "sord"=>"asc", "nd"=>"1378265968962"}
+  [4;35;1mVincentian Load (1.0ms)[0m   [0mSELECT * FROM "vincentians" ORDER BY first_name asc LIMIT 100 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "vincentians" ORDER BY first_name asc [0m
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians_select?q=1&_search=false&nd=1378265968962&rows=100&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:39:29) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"100", "sidx"=>"delivery_date", "sord"=>"desc", "nd"=>"1378265969016"}
+  [4;35;1mDelivery Load (4.9ms)[0m   [0mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;36;1mRecipient Load (2.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (117,242,142,104,227,252,137,214,172,195,247,209,182,192,244,144,106,254,154,187,239,216,116,241,203,197,249,149,174,226,251,184,236,213,159,200,194,246,146,181,108,233,256,189,243,143,220,205,130,176,228,253,238,163,115,240,140,196,248,173,250,125,183,112,193,245,132,255,155)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id ORDER BY delivery_date desc [0m
+Completed in 113ms (View: 1, DB: 9) | 200 OK [http://localhost/teams/new?q=1&_search=false&nd=1378265969016&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:39:29) [GET]
+  Parameters: {"page"=>"1", "_search"=>"false", "q"=>"1", "rows"=>"10", "sidx"=>"first_name", "sord"=>"asc", "nd"=>"1378265969066"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/teams/vincentians?q=1&_search=false&nd=1378265969066&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:52:45) [GET]
+  [4;36;1mDelivery Load (0.6ms)[0m   [0;1mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;35;1mRecipient Load (0.8ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (120,123,128,124,121,119,118,116,115,114,113,112,111,110,130,109,108,107,106,104)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id [0m
+Rendering template within layouts/application
+Rendering teams/new
+Completed in 42ms (View: 18, DB: 3) | 200 OK [http://localhost/teams/new]
+
+
+Processing TeamsController#vincentians_select (for 127.0.0.1 at 2013-09-03 23:52:45) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266765752", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "sord"=>"asc"}
+  [4;36;1mVincentian Load (0.9ms)[0m   [0;1mSELECT * FROM "vincentians" ORDER BY first_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" ORDER BY first_name asc [0m
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians_select?q=1&_search=false&nd=1378266765752&rows=100&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:52:45) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266765801", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;36;1mDelivery Load (55.7ms)[0m   [0;1mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;35;1mRecipient Load (3.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (236,197,213,149,174,159,184,200,246,256,233,194,146,181,108,243,220,253,189,205,143,228,130,238,240,176,250,163,115,140,248,196,173,125,183,112,245,255,193,155,132,242,252,117,142,227,104,214,137,247,172,209,195,182,244,254,192,144,154,106,239,216,241,187,251,203,116,249,226)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id ORDER BY delivery_date desc [0m
+Completed in 120ms (View: 1, DB: 60) | 200 OK [http://localhost/teams/new?q=1&_search=false&nd=1378266765801&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:52:45) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266765838", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "sord"=>"asc"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/teams/vincentians?q=1&_search=false&nd=1378266765838&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  [4;36;1mRecipient Load (0.9ms)[0m   [0;1mSELECT * FROM "recipients" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" [0m
+Rendering template within layouts/application
+Rendering recipients/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/recipients]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266782234", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"last_name", "sord"=>"asc"}
+  [4;36;1mRecipient Load (4.9ms)[0m   [0;1mSELECT * FROM "recipients" ORDER BY last_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" ORDER BY last_name asc [0m
+Completed in 39ms (View: 1, DB: 5) | 200 OK [http://localhost/recipients?q=1&_search=false&nd=1378266782234&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266782302", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/recipients/deliveries?q=1&_search=false&nd=1378266782302&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  [4;36;1mRecipient Load (0.7ms)[0m   [0;1mSELECT * FROM "recipients" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" [0m
+Rendering template within layouts/application
+Rendering recipients/index
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/recipients]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266782476", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"last_name", "sord"=>"asc"}
+  [4;36;1mRecipient Load (5.0ms)[0m   [0;1mSELECT * FROM "recipients" ORDER BY last_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "recipients" ORDER BY last_name asc [0m
+Completed in 44ms (View: 2, DB: 5) | 200 OK [http://localhost/recipients?q=1&_search=false&nd=1378266782476&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:53:02) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266782536", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/recipients/deliveries?q=1&_search=false&nd=1378266782536&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:53:19) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266799269", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "id"=>"159", "sord"=>"desc"}
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mDelivery Load (0.6ms)[0m   [0mSELECT * FROM "deliveries" WHERE ("deliveries".recipient_id = 159) ORDER BY delivery_date desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" WHERE ("deliveries".recipient_id = 159) ORDER BY delivery_date desc [0m
+Completed in 53ms (View: 1, DB: 1) | 200 OK [http://localhost/recipients/deliveries?q=1&id=159&_search=false&nd=1378266799269&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:53:22) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266802103", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "id"=>"196", "sord"=>"desc"}
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mDelivery Load (0.5ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE ("deliveries".recipient_id = 196) ORDER BY delivery_date desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" WHERE ("deliveries".recipient_id = 196) ORDER BY delivery_date desc [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/recipients/deliveries?q=1&id=196&_search=false&nd=1378266802103&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-03 23:53:25) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266805067", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "id"=>"115", "sord"=>"desc"}
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mDelivery Load (0.5ms)[0m   [0mSELECT * FROM "deliveries" WHERE ("deliveries".recipient_id = 115) ORDER BY delivery_date desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" WHERE ("deliveries".recipient_id = 115) ORDER BY delivery_date desc [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/recipients/deliveries?q=1&id=115&_search=false&nd=1378266805067&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-03 23:53:45) [GET]
+  [4;35;1mVincentian Load (0.7ms)[0m   [0mSELECT * FROM "vincentians" LIMIT 20 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "vincentians" [0m
+Rendering template within layouts/application
+Rendering vincentians/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/vincentians]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-03 23:53:45) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266825745", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"last_name", "sord"=>"asc"}
+  [4;35;1mVincentian Load (0.8ms)[0m   [0mSELECT * FROM "vincentians" ORDER BY last_name asc LIMIT 100 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "vincentians" ORDER BY last_name asc [0m
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/vincentians?q=1&_search=false&nd=1378266825745&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:53:51) [GET]
+  [4;35;1mDelivery Load (0.6ms)[0m   [0mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" [0m
+Rendering template within layouts/application
+Rendering deliveries/index
+  [4;35;1mRecipient Load (4.9ms)[0m   [0mSELECT * FROM "recipients" [0m
+Completed in 77ms (View: 27, DB: 6) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:53:52) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266832071", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;36;1mDelivery Load (4.8ms)[0m   [0;1mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" ORDER BY delivery_date desc [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 228) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 203) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 216) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 137) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 255) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 256) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 253) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 252) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 213) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 254) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 142) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 132) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 197) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mRecipient Load (0.6ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 251) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 143) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 250) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 246) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 227) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 247) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 248) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 249) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 244) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 233) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 195) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 163) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 130) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 205) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 243) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 189) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 200) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 125) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 112) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 240) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 239) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 104) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 238) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 174) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 173) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 181) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 172) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 187) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 183) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+Completed in 148ms (View: 1, DB: 20) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378266832071&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:54:07) [GET]
+  [4;36;1mDelivery Load (0.5ms)[0m   [0;1mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;35;1mRecipient Load (0.8ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (120,123,128,124,121,119,118,116,115,114,113,112,111,110,130,109,108,107,106,104)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id [0m
+Rendering template within layouts/application
+Rendering teams/new
+Completed in 20ms (View: 5, DB: 2) | 200 OK [http://localhost/teams/new]
+
+
+Processing TeamsController#vincentians_select (for 127.0.0.1 at 2013-09-03 23:54:07) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266847153", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "sord"=>"asc"}
+  [4;36;1mVincentian Load (0.8ms)[0m   [0;1mSELECT * FROM "vincentians" ORDER BY first_name asc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" ORDER BY first_name asc [0m
+Completed in 60ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians_select?q=1&_search=false&nd=1378266847153&rows=100&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-03 23:54:07) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266847196", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;36;1mDelivery Load (5.1ms)[0m   [0;1mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;35;1mRecipient Load (2.7ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" IN (236,197,213,149,174,159,184,200,246,256,233,194,146,181,108,243,220,253,189,205,143,228,130,238,240,176,250,163,115,140,248,196,173,125,183,112,245,255,193,155,132,242,252,117,142,227,104,214,137,247,172,209,195,182,244,254,192,144,154,106,239,216,241,187,251,203,116,249,226)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(DISTINCT "deliveries".id) AS count_all FROM "deliveries" LEFT OUTER JOIN "recipients" ON "recipients".id = "deliveries".recipient_id ORDER BY delivery_date desc [0m
+Completed in 61ms (View: 1, DB: 9) | 200 OK [http://localhost/teams/new?q=1&_search=false&nd=1378266847196&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:54:07) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266847242", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "sord"=>"asc"}
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/teams/vincentians?q=1&_search=false&nd=1378266847242&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:54:27) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266866996", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "id"=>"537", "sord"=>"asc"}
+  [4;36;1mDelivery Load (0.1ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE ("deliveries"."id" = 537) [0m
+  [4;35;1mVincentian Load (0.5ms)[0m   [0mSELECT "vincentians".* FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 537)) ORDER BY first_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 537)) ORDER BY first_name asc [0m
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians?q=1&id=537&_search=false&nd=1378266866996&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:54:36) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266876409", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "id"=>"537", "sord"=>"asc"}
+  [4;35;1mDelivery Load (0.1ms)[0m   [0mSELECT * FROM "deliveries" WHERE ("deliveries"."id" = 537) [0m
+  [4;36;1mVincentian Load (0.5ms)[0m   [0;1mSELECT "vincentians".* FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 537)) ORDER BY first_name asc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 537)) ORDER BY first_name asc [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians?q=1&id=537&_search=false&nd=1378266876409&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:54:37) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266877758", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "id"=>"540", "sord"=>"asc"}
+  [4;36;1mDelivery Load (0.2ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE ("deliveries"."id" = 540) [0m
+  [4;35;1mVincentian Load (0.5ms)[0m   [0mSELECT "vincentians".* FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 540)) ORDER BY first_name asc LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 540)) ORDER BY first_name asc [0m
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians?q=1&id=540&_search=false&nd=1378266877758&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-03 23:54:46) [GET]
+  Parameters: {"rows"=>"10", "nd"=>"1378266886684", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"first_name", "id"=>"529", "sord"=>"asc"}
+  [4;35;1mDelivery Load (0.1ms)[0m   [0mSELECT * FROM "deliveries" WHERE ("deliveries"."id" = 529) [0m
+  [4;36;1mVincentian Load (0.5ms)[0m   [0;1mSELECT "vincentians".* FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 529)) ORDER BY first_name asc LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "vincentians" INNER JOIN "teams" ON "vincentians".id = "teams".vincentian_id WHERE (("teams".delivery_id = 529)) ORDER BY first_name asc [0m
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/teams/vincentians?q=1&id=529&_search=false&nd=1378266886684&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#create (for 127.0.0.1 at 2013-09-03 23:54:56) [POST]
+  Parameters: {"vin_id0"=>"22", "vin_id1"=>"29", "del_id0"=>"540", "del_id1"=>"529"}
+  [4;36;1mDelivery Load (0.6ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-09-03') ORDER BY delivery_date ASC LIMIT 1[0m
+  [4;35;1mTeam Load (1.5ms)[0m   [0mSELECT * FROM "teams" ORDER BY team_num DESC LIMIT 1[0m
+  [4;36;1mTeam Load (0.3ms)[0m   [0;1mSELECT "teams".id FROM "teams" WHERE ("teams"."vincentian_id" = 22 AND "teams".delivery_id = 540) LIMIT 1[0m
+  [4;35;1mTeam Create (82.3ms)[0m   [0mINSERT INTO "teams" ("delivery_id", "updated_at", "team_num", "vincentian_id", "created_at") VALUES(540, '2013-09-04 03:54:56', 195, 22, '2013-09-04 03:54:56')[0m
+  [4;36;1mTeam Load (0.7ms)[0m   [0;1mSELECT "teams".id FROM "teams" WHERE ("teams"."vincentian_id" = 22 AND "teams".delivery_id = 529) LIMIT 1[0m
+  [4;35;1mTeam Load (0.3ms)[0m   [0mSELECT "teams".id FROM "teams" WHERE ("teams"."vincentian_id" = 29 AND "teams".delivery_id = 540) LIMIT 1[0m
+  [4;36;1mTeam Create (0.2ms)[0m   [0;1mINSERT INTO "teams" ("delivery_id", "updated_at", "team_num", "vincentian_id", "created_at") VALUES(540, '2013-09-04 03:54:56', 195, 29, '2013-09-04 03:54:56')[0m
+  [4;35;1mTeam Load (0.8ms)[0m   [0mSELECT "teams".id FROM "teams" WHERE ("teams"."vincentian_id" = 29 AND "teams".delivery_id = 529) LIMIT 1[0m
+  [4;36;1mTeam Create (0.4ms)[0m   [0;1mINSERT INTO "teams" ("delivery_id", "updated_at", "team_num", "vincentian_id", "created_at") VALUES(529, '2013-09-04 03:54:56', 195, 29, '2013-09-04 03:54:56')[0m
+Rendering teams/create
+Completed in 479ms (View: 3, DB: 87) | 200 OK [http://localhost/teams/create]
+
+
+Processing DeliveriesController#central_report to pdf (for 127.0.0.1 at 2013-09-03 23:55:13) [GET]
+  [4;35;1mDelivery Load (0.5ms)[0m   [0mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-01-01' AND delivery_date <= '2013-09-03') [0m
+Redirected to http://localhost:3000/deliveries
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/deliveries/central_report.pdf]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:13) [GET]
+  [4;36;1mDelivery Load (0.8ms)[0m   [0;1mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" [0m
+Rendering template within layouts/application
+Rendering deliveries/index
+  [4;36;1mRecipient Load (5.2ms)[0m   [0;1mSELECT * FROM "recipients" [0m
+Completed in 70ms (View: 58, DB: 6) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:15) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266915746", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;35;1mDelivery Load (4.8ms)[0m   [0mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" ORDER BY delivery_date desc [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 228) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;35;1mRecipient Load (0.5ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 203) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 216) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 137) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 255) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 256) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 253) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 252) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 213) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 254) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 142) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 132) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 197) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 251) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 143) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 250) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 246) [0m
+  [4;35;1mRecipient Load (0.1ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 227) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 247) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 248) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 249) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 244) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 233) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 195) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 163) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 130) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 205) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 243) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 189) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 200) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 125) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 112) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 240) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 239) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 104) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 238) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 174) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 173) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 181) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 172) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 187) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 183) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+Completed in 101ms (View: 1, DB: 18) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378266915746&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing DeliveriesController#delivery_report to pdf (for 127.0.0.1 at 2013-09-03 23:55:20) [GET]
+  Parameters: {"target"=>"blank"}
+  [4;35;1mDelivery Load (0.6ms)[0m   [0mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-09-03') ORDER BY delivery_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-09-03') ORDER BY delivery_date ASC LIMIT 1[0m
+  [4;35;1mTeam Load (0.7ms)[0m   [0mSELECT DISTINCT team_num FROM "teams" INNER JOIN "deliveries" ON "deliveries".id = "teams".delivery_id WHERE (deliveries.delivery_date = NULL) ORDER BY teams.team_num ASC[0m
+Redirected to http://localhost:3000/deliveries
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/deliveries/delivery_report.pdf?target=blank]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:20) [GET]
+  [4;36;1mDelivery Load (0.6ms)[0m   [0;1mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" [0m
+Rendering template within layouts/application
+Rendering deliveries/index
+  [4;36;1mRecipient Load (4.4ms)[0m   [0;1mSELECT * FROM "recipients" [0m
+Completed in 29ms (View: 16, DB: 5) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:23) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266923428", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;35;1mDelivery Load (5.3ms)[0m   [0mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" ORDER BY delivery_date desc [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 228) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 203) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 216) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 137) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 255) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 256) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 253) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 252) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 213) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 254) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 142) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 132) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 197) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 251) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 143) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 250) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 246) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 227) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 247) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 248) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 249) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 244) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 233) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 195) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 163) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 130) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 205) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 243) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 189) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 200) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 125) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 112) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 240) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 239) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 104) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 238) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 174) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 173) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 181) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 172) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 187) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 183) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+Completed in 94ms (View: 1, DB: 17) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378266923428&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing DeliveriesController#admin_report to pdf (for 127.0.0.1 at 2013-09-03 23:55:26) [GET]
+  Parameters: {"target"=>"blank"}
+  [4;35;1mDelivery Load (0.5ms)[0m   [0mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-09-03') ORDER BY delivery_date ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "deliveries" WHERE (delivery_date >= '2013-09-03') ORDER BY delivery_date ASC LIMIT 1[0m
+Redirected to http://localhost:3000/deliveries
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/deliveries/admin_report.pdf?target=blank]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:26) [GET]
+  [4;35;1mDelivery Load (0.6ms)[0m   [0mSELECT * FROM "deliveries" LIMIT 20 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "deliveries" [0m
+Rendering template within layouts/application
+Rendering deliveries/index
+  [4;35;1mRecipient Load (4.6ms)[0m   [0mSELECT * FROM "recipients" [0m
+Completed in 30ms (View: 17, DB: 5) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-03 23:55:28) [GET]
+  Parameters: {"rows"=>"100", "nd"=>"1378266928245", "_search"=>"false", "page"=>"1", "q"=>"1", "sidx"=>"delivery_date", "sord"=>"desc"}
+  [4;36;1mDelivery Load (8.8ms)[0m   [0;1mSELECT * FROM "deliveries" ORDER BY delivery_date desc LIMIT 100 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "deliveries" ORDER BY delivery_date desc [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;35;1mRecipient Load (0.4ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 228) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 203) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 216) [0m
+  [4;36;1mRecipient Load (0.3ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;35;1mRecipient Load (0.3ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 137) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 255) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 256) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 253) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 252) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 213) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 254) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 142) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 132) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 197) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 214) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 251) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 143) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 250) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 246) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 227) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 247) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 248) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 249) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 244) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 115) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 245) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 116) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 233) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 195) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 163) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 130) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 242) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 236) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 205) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 243) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 184) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 192) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 226) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 108) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 241) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 189) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 200) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 125) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 112) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 146) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 193) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 240) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 239) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 104) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 194) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 238) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 154) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 196) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 106) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 174) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 144) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 173) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 220) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 176) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 149) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 209) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 117) [0m
+  [4;36;1mRecipient Load (0.2ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 181) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 172) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 159) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 187) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 182) [0m
+  [4;35;1mRecipient Load (0.2ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 183) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "recipients" WHERE ("recipients"."id" = 155) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "recipients" WHERE ("recipients"."id" = 140) [0m
+Completed in 144ms (View: 1, DB: 22) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378266928245&rows=100&page=1&sidx=delivery_date&sord=desc]

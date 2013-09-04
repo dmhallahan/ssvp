@@ -1,0 +1,8 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Delivery: create, read, update, delete
+  Recipient: create, read, update, delete
+  Vincentian: create, read, update, delete

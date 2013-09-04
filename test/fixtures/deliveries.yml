@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  delivery_date: 2009-12-28
+  comment: MyText
+  bags: 1
+  recipient_id: 1
+  team_id: 1
+
+two:
+  delivery_date: 2009-12-28
+  comment: MyText
+  bags: 1
+  recipient_id: 1
+  team_id: 1

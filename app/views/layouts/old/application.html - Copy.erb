@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= "#{controller.controller_name.capitalize}: #{controller.action_name}" %></title>
+  
+
+  <%= jqgrid_stylesheets %>
+  <%= jqgrid_javascripts %> 
+  
+
+  
+</head>
+<body>
+
+
+<%if flash[:notice] %>
+  <script>alert('<%= flash[:notice] %>')</script>
+<%end%>
+
+<script type="text/javascript">
+	
+	function afterSubmit(r, data, action) {
+	  if(r.responseText != "") { // If a message is returned
+	    alert(r.responseText);  	
+      return false; // Don't remove this!
+    }
+    return true; // Don't remove this!
+	}
+	
+</script>
+
+<%= yield %>
+
+</body>
+</html>

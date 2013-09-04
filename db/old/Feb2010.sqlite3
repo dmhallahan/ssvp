@@ -1,0 +1,218 @@
+DROP TABLE IF EXISTS "deliveries";
+CREATE TABLE "deliveries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "delivery_date" date, "comment" text, "bags" integer, "recipient_id" integer, "created_at" datetime, "updated_at" datetime);
+INSERT INTO "deliveries" VALUES(23,'2010-02-06','',4,104,'2010-02-06 00:59:02','2010-02-12 22:53:08');
+INSERT INTO "deliveries" VALUES(24,'2010-02-06','',7,106,'2010-02-06 00:59:08','2010-02-12 22:53:54');
+INSERT INTO "deliveries" VALUES(25,'2010-02-06','',4,107,'2010-02-06 00:59:16','2010-02-12 22:54:35');
+INSERT INTO "deliveries" VALUES(26,'2010-02-06','',4,108,'2010-02-06 00:59:22','2010-02-12 22:55:11');
+INSERT INTO "deliveries" VALUES(27,'2010-02-06','',4,109,'2010-02-06 00:59:27','2010-02-12 22:55:28');
+INSERT INTO "deliveries" VALUES(28,'2010-02-06','',4,110,'2010-02-06 00:59:33','2010-02-12 22:56:09');
+INSERT INTO "deliveries" VALUES(29,'2010-02-06','',4,111,'2010-02-06 00:59:45','2010-02-12 22:56:29');
+INSERT INTO "deliveries" VALUES(30,'2010-02-06','',4,112,'2010-02-06 00:59:58','2010-02-12 22:56:46');
+INSERT INTO "deliveries" VALUES(31,'2010-02-06','',4,113,'2010-02-06 01:00:05','2010-02-12 22:57:30');
+INSERT INTO "deliveries" VALUES(32,'2010-02-06','',4,114,'2010-02-06 01:00:17','2010-02-12 22:57:45');
+INSERT INTO "deliveries" VALUES(33,'2010-02-06','',6,115,'2010-02-06 01:00:23','2010-02-12 22:57:58');
+INSERT INTO "deliveries" VALUES(34,'2010-02-06','',4,116,'2010-02-06 01:00:29','2010-02-12 22:58:13');
+INSERT INTO "deliveries" VALUES(36,'2010-02-13','',4,118,'2010-02-13 00:19:02','2010-02-14 23:13:55');
+INSERT INTO "deliveries" VALUES(37,'2010-02-13','',3,119,'2010-02-13 00:20:44','2010-02-14 23:14:16');
+INSERT INTO "deliveries" VALUES(38,'2010-02-13','',3,121,'2010-02-13 00:22:03','2010-02-14 23:16:29');
+INSERT INTO "deliveries" VALUES(39,'2010-02-13','',3,124,'2010-02-13 00:22:27','2010-02-14 23:16:50');
+INSERT INTO "deliveries" VALUES(40,'2010-02-13','',5,128,'2010-02-13 00:22:53','2010-02-14 23:17:08');
+INSERT INTO "deliveries" VALUES(41,'2010-02-13','',3,123,'2010-02-13 00:23:14','2010-02-14 23:17:57');
+INSERT INTO "deliveries" VALUES(42,'2010-02-13','',4,120,'2010-02-13 00:23:33','2010-02-14 23:18:14');
+INSERT INTO "deliveries" VALUES(43,'2010-02-13','',4,130,'2010-02-13 00:24:06','2010-02-14 23:18:32');
+INSERT INTO "deliveries" VALUES(44,'2010-02-13','',5,117,'2010-02-13 00:24:28','2010-02-14 23:19:03');
+INSERT INTO "deliveries" VALUES(45,'2010-02-13','',5,122,'2010-02-13 00:24:46','2010-02-14 23:19:28');
+INSERT INTO "deliveries" VALUES(46,'2010-02-13','',6,125,'2010-02-13 00:25:14','2010-02-14 23:19:44');
+INSERT INTO "deliveries" VALUES(47,'2010-02-13','',4,132,'2010-02-13 00:25:41','2010-02-14 23:20:01');
+INSERT INTO "deliveries" VALUES(48,'2010-02-13','',4,129,'2010-02-13 00:26:09','2010-02-14 23:20:36');
+INSERT INTO "deliveries" VALUES(49,'2010-02-13','',5,126,'2010-02-13 00:26:31','2010-02-14 23:20:50');
+INSERT INTO "deliveries" VALUES(50,'2010-02-13','',4,127,'2010-02-13 00:26:48','2010-02-14 23:21:46');
+INSERT INTO "deliveries" VALUES(51,'2010-02-13','',4,131,'2010-02-13 00:27:15','2010-02-14 23:22:26');
+INSERT INTO "deliveries" VALUES(52,'2010-02-15','',7,133,'2010-02-19 15:30:10','2010-02-19 15:30:10');
+DROP TABLE IF EXISTS "recipients";
+CREATE TABLE "recipients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "address" varchar(255), "city" varchar(255), "postal_code" varchar(255), "phone_number" varchar(255), "adults" integer, "children" integer, "notes" text, "delivery_notes" text, "created_at" datetime, "updated_at" datetime);
+INSERT INTO "recipients" VALUES(104,'Shirley','Legault','7345 Tranby A208','Windsor','','519-988-6713',1,1,'','','2010-01-31 19:29:29','2010-02-06 00:29:01');
+INSERT INTO "recipients" VALUES(106,'Rose','Brown','7375 Tranby B207','Windsor','','519-945-0581',2,2,'','Girls are 13 and 14','2010-02-06 00:30:23','2010-02-06 00:30:23');
+INSERT INTO "recipients" VALUES(107,'Krystal/William','Duquette/Hurst','7555 Wyandotte #201','Windsor','','519-945-1292',2,1,'','6 year old child on weekend','2010-02-06 00:32:11','2010-02-06 01:10:58');
+INSERT INTO "recipients" VALUES(108,'Scott','Bowman','6400 Wyandotte #212','Windsor','','519-915-2465',1,NULL,'','','2010-02-06 00:32:49','2010-02-06 00:32:49');
+INSERT INTO "recipients" VALUES(109,'Shaun','Cote','6363 Wyandotte #310','Windsor','','519-944-7265',1,NULL,'','','2010-02-06 00:33:39','2010-02-06 00:33:39');
+INSERT INTO "recipients" VALUES(110,'Dan ','Piche','6363 Wyandotte #201','Windsor','','',1,NULL,'Drouillard Pl co-op sheets given Jan 2010','','2010-02-06 00:34:21','2010-02-06 00:35:26');
+INSERT INTO "recipients" VALUES(111,'Michelle ','Durocher','6363 Wyandotte #217','Windsor','','519-962-2821',2,NULL,'','18 year old daughter','2010-02-06 00:37:19','2010-02-06 00:37:19');
+INSERT INTO "recipients" VALUES(112,'Randy','Gouin','4545 Wyandotte 2C','Windsor','','226-346-1726',2,3,'','','2010-02-06 00:38:32','2010-02-06 00:38:32');
+INSERT INTO "recipients" VALUES(113,'Karen','Laporte','4547 Wyandotte 2D','Windsor','','519-945-0345',1,1,'','','2010-02-06 00:39:15','2010-02-06 00:39:15');
+INSERT INTO "recipients" VALUES(114,'Ryan','Blanchette','877 Pillette ','Windsor','','226-345-4557',1,NULL,'','no beans or carbs','2010-02-06 00:40:15','2010-02-06 00:40:15');
+INSERT INTO "recipients" VALUES(115,'Bonnie','Barwise','867 Arthur','Windsor','','519-974-4225',2,3,'','','2010-02-06 00:41:24','2010-02-06 00:41:24');
+INSERT INTO "recipients" VALUES(116,'Eczonia','Morgan','3400 Erskine #508','Windsor','','519-915-4705',1,NULL,'cell 519-965-8604
+pron. E-zonia','20 yr old son on weekends
+door sec. code 02','2010-02-06 00:42:58','2010-02-06 00:44:24');
+INSERT INTO "recipients" VALUES(117,'John/Jeff','Kornafel','943 Glidden','Windsor','','226-345-3679',3,NULL,'','','2010-02-11 00:57:19','2010-02-11 00:57:19');
+INSERT INTO "recipients" VALUES(118,'Sandra/Larry','Scurk/Docherty','7325 Tranby 408C','Windsor','','519-915-8212',2,1,'8yr old boy','8 yr old boy','2010-02-11 00:59:46','2010-02-11 00:59:46');
+INSERT INTO "recipients" VALUES(119,'Hope','Thompson','7325 Tranby  C205','Windsor','','519-962-6178',1,1,'4 month baby 
+Parent''s Choice formula','4 month baby
+Parent''s Choice formula','2010-02-11 01:04:28','2010-02-11 01:04:28');
+INSERT INTO "recipients" VALUES(120,'Bernice','Papa','6600 Wyandotte #205','Windsor','','519-948-4248',2,NULL,'42 yr old son visits 3-4 times a week
+he is unemployed','handicapped-takes awhile to get to the door','2010-02-11 01:08:39','2010-02-11 01:08:39');
+INSERT INTO "recipients" VALUES(121,'Donald/Stacey','Tessier/Hooper','7345 Tranby A408','Windsor','','519-945-4754',2,NULL,'','','2010-02-11 01:10:56','2010-02-11 01:10:56');
+INSERT INTO "recipients" VALUES(122,'Crystal','Primeau','5231 Wyandotte lower','Windsor','','',1,2,'19 months
+14 years','19 months
+14 years','2010-02-12 00:24:15','2010-02-12 00:24:15');
+INSERT INTO "recipients" VALUES(123,'Michael','Hoberg','7041 Wyandotte #4','Windsor','','519-915-8104 friend',1,1,'on disability
+12 yr old daughter
+just came from Sarnia','12 yr old daughter','2010-02-12 00:30:32','2010-02-12 00:30:32');
+INSERT INTO "recipients" VALUES(124,'Doug/Raymond','Dupuis /Hunter','7345 Tranby A406','Windsor','','519-890-7719',2,NULL,'broken buzzer -call when you get there','broken-buzzer
+call when you get there','2010-02-12 00:35:52','2010-02-12 00:35:52');
+INSERT INTO "recipients" VALUES(125,'Josephine','Mukashimwe','5110 Wyandotte Q61','Windsor','','519-997-9861',2,3,'5 and 12','5 and 12','2010-02-12 00:38:17','2010-02-12 00:38:17');
+INSERT INTO "recipients" VALUES(126,'Melanie','McLeod','875 Jos Janisse #26','Windsor','','519-915-4126',1,4,'children 13,7,5,4','children 13,7,5,4','2010-02-12 00:40:35','2010-02-12 00:40:35');
+INSERT INTO "recipients" VALUES(127,'Sarah','Michaud','867 Jos Janisse #17','Windsor','','',1,2,'','','2010-02-12 00:42:07','2010-02-12 00:42:07');
+INSERT INTO "recipients" VALUES(128,'Angel(ine)','Irving','7285 Tranby D301','Windsor','','519-974-9292',1,2,'boys  11
+  5-lactose intolerant','boys    11
+  5---lactose intolerant','2010-02-12 00:49:01','2010-02-12 00:49:01');
+INSERT INTO "recipients" VALUES(129,'John (David)','Shelson','4365 Wyandotte #210','Windsor','','519-997-9774',1,NULL,'Riggs Manor','Riggs Manor','2010-02-12 22:17:17','2010-02-12 22:17:17');
+INSERT INTO "recipients" VALUES(130,'Debra','Poulin','6363 Wyandotte #113','Windsor','','',1,NULL,'buzz #114','buzz #114','2010-02-12 22:19:45','2010-02-12 22:19:45');
+INSERT INTO "recipients" VALUES(131,'Chris','Bennett','205 Strabane #2','Windsor','','519-567-9955',1,NULL,'','','2010-02-12 22:21:11','2010-02-12 22:21:11');
+INSERT INTO "recipients" VALUES(132,'Pam','Roach','889 Pillette #4','Windsor','','519-991-3398',1,1,'13 yr old','13yr old','2010-02-12 22:25:59','2010-02-12 22:25:59');
+INSERT INTO "recipients" VALUES(133,'Paul','Brisson','1093 Jefferson','Windsor','','226-345-3174',3,NULL,'','','2010-02-19 15:27:14','2010-02-19 15:27:14');
+INSERT INTO "recipients" VALUES(134,'Stan','Loop','6630 Wyandotte #308','Windsor','','519-562-6360',1,NULL,'','','2010-02-19 15:35:21','2010-02-19 15:35:21');
+INSERT INTO "recipients" VALUES(135,'Jeff','Sinclair','6460 Wyandotte #9','Windsor','','519-991-6621',1,1,'18yr old boy
+attends L''essor','18 yr old boy','2010-02-19 15:37:57','2010-02-19 15:37:57');
+INSERT INTO "recipients" VALUES(136,'Monique ','Jacques','6460 Wyandotte #13','Windsor','','519-419-3752',1,1,'teen girl','teen girl','2010-02-19 15:39:50','2010-02-19 15:39:50');
+INSERT INTO "recipients" VALUES(137,'Mark','Seguin','6460 Wyandotte #12','Windsor','','519-915-8210',1,1,'5 yr old boy
+4 days a week','5 yr old boy
+4 days a week','2010-02-19 16:04:07','2010-02-19 16:04:07');
+INSERT INTO "recipients" VALUES(138,'David / Dave ','Nantais /St Louis','6363 Wyandotte #115','Windsor','','519-915-6446',2,NULL,'nephew-26yr','','2010-02-19 16:12:58','2010-02-19 16:12:58');
+INSERT INTO "recipients" VALUES(139,'Amanda','Turner','6363 Wyandotte #312','Windsor','','519-991-9026',2,1,'4 yr old girl','4 yr old girl
+
+Buzz #217','2010-02-19 16:16:00','2010-02-19 16:16:00');
+INSERT INTO "recipients" VALUES(140,'Shirley','Kocsis','63 63 Wyandotte #218','Windsor','','519-915-6932',2,NULL,'','','2010-02-19 16:17:57','2010-02-19 16:17:57');
+INSERT INTO "recipients" VALUES(141,'Deanna /Chris','Ouellette/Clark','4663 Wyandotte ','Windsor','','519-996-0402',2,1,'Deanna on disability
+boy 16 months
+eats fruits for 6 mo old
+and some food for 12 month  olds','Boy -16 months
+eats fruits for 6 mo old
+and some food for 12 month olds','2010-02-19 16:36:31','2010-02-19 20:14:21');
+INSERT INTO "recipients" VALUES(142,'Mark ','Tuz','6400 Wyandotte #201','Windsor','','519-251-8737',1,NULL,'','','2010-02-19 16:39:15','2010-02-19 16:39:15');
+INSERT INTO "recipients" VALUES(143,'Daniel','Cusmanic','6363 Wyandotte #207','Windsor','','519-567-6761',1,NULL,'has registered with Drouillard Place Food Co-op Feb 2010','has registered with Drouillard Place co-op ','2010-02-19 16:42:07','2010-02-19 16:42:07');
+INSERT INTO "recipients" VALUES(144,'Leda','Mihasku','1070 Homedale ','Windsor','','519-988-0595',2,3,'children 6, 15, 18','children 6, 15, 18','2010-02-19 20:48:45','2010-02-19 20:48:45');
+INSERT INTO "recipients" VALUES(145,'Jacob','Bobiwash','897 Pillette','Windsor','','',2,1,'','','2010-02-19 20:51:14','2010-02-19 20:51:14');
+INSERT INTO "recipients" VALUES(146,'Joseph','Romita','821 Pillette #1','Windsor','','519-564-5553',1,NULL,'','','2010-02-19 20:52:54','2010-02-19 20:52:54');
+INSERT INTO "recipients" VALUES(147,'Stephanie','Pavao','848 Pillette #3','Windsor','','',2,1,'','','2010-02-19 20:59:27','2010-02-19 20:59:27');
+INSERT INTO "recipients" VALUES(148,'Christine','Radke','828 Arthur','Windsor','','519-254-9377',2,1,'10 mo old girl does not eat baby food','10 month old girl does not eat baby food','2010-02-19 21:02:39','2010-02-19 21:02:39');
+INSERT INTO "recipients" VALUES(149,'Fred','Kirchner','4347 Riverside Dr','Windsor','','519-948-5757',1,2,'17 yr old boys
+near Jos Janisse','17 yr old boys 
+near Jos Janisse','2010-02-19 21:04:48','2010-02-19 21:04:48');
+DROP TABLE IF EXISTS "schema_migrations";
+CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL);
+INSERT INTO "schema_migrations" VALUES('20091229014103');
+INSERT INTO "schema_migrations" VALUES('20091229014309');
+INSERT INTO "schema_migrations" VALUES('20091229014504');
+INSERT INTO "schema_migrations" VALUES('20091229014713');
+INSERT INTO "schema_migrations" VALUES('20100104014552');
+INSERT INTO "schema_migrations" VALUES('20100108221347');
+INSERT INTO "schema_migrations" VALUES('20100131182845');
+DROP TABLE IF EXISTS "sqlite_sequence";
+CREATE TABLE sqlite_sequence(name,seq);
+INSERT INTO "sqlite_sequence" VALUES('deliveries',52);
+INSERT INTO "sqlite_sequence" VALUES('recipients',149);
+INSERT INTO "sqlite_sequence" VALUES('vincentians',28);
+INSERT INTO "sqlite_sequence" VALUES('teams',152);
+INSERT INTO "sqlite_sequence" VALUES('typus_users',1);
+DROP TABLE IF EXISTS "teams";
+CREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vincentian_id" integer, "delivery_id" integer, "created_at" datetime, "updated_at" datetime);
+INSERT INTO "teams" VALUES(79,1,18,'2010-02-02 01:50:01','2010-02-02 01:50:01');
+INSERT INTO "teams" VALUES(80,2,18,'2010-02-02 01:50:01','2010-02-02 01:50:01');
+INSERT INTO "teams" VALUES(81,3,18,'2010-02-02 04:57:34','2010-02-02 04:57:34');
+INSERT INTO "teams" VALUES(86,3,19,'2010-02-05 18:13:16','2010-02-05 18:13:16');
+INSERT INTO "teams" VALUES(87,2,19,'2010-02-05 18:13:16','2010-02-05 18:13:16');
+INSERT INTO "teams" VALUES(88,1,20,'2010-02-05 18:13:28','2010-02-05 18:13:28');
+INSERT INTO "teams" VALUES(89,2,21,'2010-02-05 18:40:45','2010-02-05 18:40:45');
+INSERT INTO "teams" VALUES(90,24,24,'2010-02-06 01:01:51','2010-02-06 01:01:51');
+INSERT INTO "teams" VALUES(91,15,24,'2010-02-06 01:01:51','2010-02-06 01:01:51');
+INSERT INTO "teams" VALUES(92,24,23,'2010-02-06 01:02:02','2010-02-06 01:02:02');
+INSERT INTO "teams" VALUES(93,15,23,'2010-02-06 01:02:02','2010-02-06 01:02:02');
+INSERT INTO "teams" VALUES(94,27,25,'2010-02-06 01:03:29','2010-02-06 01:03:29');
+INSERT INTO "teams" VALUES(95,19,25,'2010-02-06 01:03:29','2010-02-06 01:03:29');
+INSERT INTO "teams" VALUES(96,27,26,'2010-02-06 01:03:37','2010-02-06 01:03:37');
+INSERT INTO "teams" VALUES(97,19,26,'2010-02-06 01:03:37','2010-02-06 01:03:37');
+INSERT INTO "teams" VALUES(98,23,27,'2010-02-06 01:04:09','2010-02-06 01:04:09');
+INSERT INTO "teams" VALUES(99,14,27,'2010-02-06 01:04:09','2010-02-06 01:04:09');
+INSERT INTO "teams" VALUES(100,23,28,'2010-02-06 01:04:16','2010-02-06 01:04:16');
+INSERT INTO "teams" VALUES(101,14,28,'2010-02-06 01:04:16','2010-02-06 01:04:16');
+INSERT INTO "teams" VALUES(102,23,29,'2010-02-06 01:04:59','2010-02-06 01:04:59');
+INSERT INTO "teams" VALUES(103,14,29,'2010-02-06 01:04:59','2010-02-06 01:04:59');
+INSERT INTO "teams" VALUES(104,13,30,'2010-02-06 01:06:29','2010-02-06 01:06:29');
+INSERT INTO "teams" VALUES(105,17,30,'2010-02-06 01:06:29','2010-02-06 01:06:29');
+INSERT INTO "teams" VALUES(106,13,31,'2010-02-06 01:06:36','2010-02-06 01:06:36');
+INSERT INTO "teams" VALUES(107,17,31,'2010-02-06 01:06:36','2010-02-06 01:06:36');
+INSERT INTO "teams" VALUES(108,22,32,'2010-02-06 01:07:32','2010-02-06 01:07:32');
+INSERT INTO "teams" VALUES(109,25,32,'2010-02-06 01:07:32','2010-02-06 01:07:32');
+INSERT INTO "teams" VALUES(110,22,33,'2010-02-06 01:07:38','2010-02-06 01:07:38');
+INSERT INTO "teams" VALUES(111,25,33,'2010-02-06 01:07:38','2010-02-06 01:07:38');
+INSERT INTO "teams" VALUES(112,21,34,'2010-02-06 01:07:56','2010-02-06 01:07:56');
+INSERT INTO "teams" VALUES(113,1,34,'2010-02-06 01:07:56','2010-02-06 01:07:56');
+INSERT INTO "teams" VALUES(114,1,35,'2010-02-06 01:16:36','2010-02-06 01:16:36');
+INSERT INTO "teams" VALUES(115,27,0,'2010-02-12 22:41:08','2010-02-12 22:41:08');
+INSERT INTO "teams" VALUES(116,19,36,'2010-02-13 00:30:02','2010-02-13 00:30:02');
+INSERT INTO "teams" VALUES(117,27,36,'2010-02-13 00:30:02','2010-02-13 00:30:02');
+INSERT INTO "teams" VALUES(118,19,37,'2010-02-13 00:30:27','2010-02-13 00:30:27');
+INSERT INTO "teams" VALUES(119,27,37,'2010-02-13 00:30:27','2010-02-13 00:30:27');
+INSERT INTO "teams" VALUES(120,19,38,'2010-02-13 00:30:45','2010-02-13 00:30:45');
+INSERT INTO "teams" VALUES(121,27,38,'2010-02-13 00:30:45','2010-02-13 00:30:45');
+INSERT INTO "teams" VALUES(122,19,39,'2010-02-13 00:31:01','2010-02-13 00:31:01');
+INSERT INTO "teams" VALUES(123,27,39,'2010-02-13 00:31:01','2010-02-13 00:31:01');
+INSERT INTO "teams" VALUES(124,15,40,'2010-02-13 00:32:01','2010-02-13 00:32:01');
+INSERT INTO "teams" VALUES(125,16,40,'2010-02-13 00:32:01','2010-02-13 00:32:01');
+INSERT INTO "teams" VALUES(126,15,41,'2010-02-13 00:32:12','2010-02-13 00:32:12');
+INSERT INTO "teams" VALUES(127,16,41,'2010-02-13 00:32:12','2010-02-13 00:32:12');
+INSERT INTO "teams" VALUES(128,15,42,'2010-02-13 00:32:47','2010-02-13 00:32:47');
+INSERT INTO "teams" VALUES(129,16,42,'2010-02-13 00:32:47','2010-02-13 00:32:47');
+INSERT INTO "teams" VALUES(130,28,43,'2010-02-13 00:34:17','2010-02-13 00:34:17');
+INSERT INTO "teams" VALUES(131,13,43,'2010-02-13 00:34:17','2010-02-13 00:34:17');
+INSERT INTO "teams" VALUES(132,28,44,'2010-02-13 00:34:38','2010-02-13 00:34:38');
+INSERT INTO "teams" VALUES(133,13,44,'2010-02-13 00:34:38','2010-02-13 00:34:38');
+INSERT INTO "teams" VALUES(134,28,45,'2010-02-13 00:34:57','2010-02-13 00:34:57');
+INSERT INTO "teams" VALUES(135,13,45,'2010-02-13 00:34:57','2010-02-13 00:34:57');
+INSERT INTO "teams" VALUES(136,22,46,'2010-02-13 00:40:17','2010-02-13 00:40:17');
+INSERT INTO "teams" VALUES(137,23,46,'2010-02-13 00:40:17','2010-02-13 00:40:17');
+INSERT INTO "teams" VALUES(139,23,47,'2010-02-13 00:43:45','2010-02-13 00:43:45');
+INSERT INTO "teams" VALUES(140,22,47,'2010-02-13 00:43:45','2010-02-13 00:43:45');
+INSERT INTO "teams" VALUES(141,23,48,'2010-02-13 00:44:21','2010-02-13 00:44:21');
+INSERT INTO "teams" VALUES(142,22,48,'2010-02-13 00:44:21','2010-02-13 00:44:21');
+INSERT INTO "teams" VALUES(143,14,49,'2010-02-13 00:44:50','2010-02-13 00:44:50');
+INSERT INTO "teams" VALUES(144,1,49,'2010-02-13 00:44:51','2010-02-13 00:44:51');
+INSERT INTO "teams" VALUES(145,14,50,'2010-02-13 00:45:00','2010-02-13 00:45:00');
+INSERT INTO "teams" VALUES(146,1,50,'2010-02-13 00:45:00','2010-02-13 00:45:00');
+INSERT INTO "teams" VALUES(147,14,51,'2010-02-13 00:45:14','2010-02-13 00:45:14');
+INSERT INTO "teams" VALUES(148,1,51,'2010-02-13 00:45:14','2010-02-13 00:45:14');
+INSERT INTO "teams" VALUES(149,1,52,'2010-02-19 15:30:56','2010-02-19 15:30:56');
+INSERT INTO "teams" VALUES(150,13,52,'2010-02-19 15:30:56','2010-02-19 15:30:56');
+INSERT INTO "teams" VALUES(151,19,0,'2010-02-19 21:12:46','2010-02-19 21:12:46');
+INSERT INTO "teams" VALUES(152,14,0,'2010-02-19 21:12:46','2010-02-19 21:12:46');
+DROP TABLE IF EXISTS "typus_users";
+CREATE TABLE "typus_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255) DEFAULT '' NOT NULL, "last_name" varchar(255) DEFAULT '' NOT NULL, "role" varchar(255) NOT NULL, "email" varchar(255) NOT NULL, "status" boolean DEFAULT 'f', "token" varchar(255) NOT NULL, "salt" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "preferences" varchar(255), "created_at" datetime, "updated_at" datetime);
+INSERT INTO "typus_users" VALUES(1,'','','admin','david.hallahan@gmail.com','t','532e7f9b299c','1d18165563154d000a688ea680a3e0b95e800e85','8eb53d206ef16a755289e54eb8e3694c5e94cdec','--- 
+:locale: :en
+','2010-02-02 01:56:41','2010-02-02 01:57:16');
+DROP TABLE IF EXISTS "users";
+CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "available" date, "comment" text, "created_at" datetime, "updated_at" datetime);
+DROP TABLE IF EXISTS "vincentians";
+CREATE TABLE "vincentians" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "address" varchar(255), "city" varchar(255), "postal_code" varchar(255), "phone_number" varchar(255), "notes" text, "created_at" datetime, "updated_at" datetime);
+INSERT INTO "vincentians" VALUES(1,'Elsi','Hallahan','','','','519-945-4304','','2010-01-10 23:35:05','2010-02-06 00:46:19');
+INSERT INTO "vincentians" VALUES(11,'Mimi','Barrett','5060 Wyandotte','Windsor','N8Y 4Y3','519-944-3959','President','2010-02-06 00:47:20','2010-02-06 00:47:20');
+INSERT INTO "vincentians" VALUES(12,'Sr. Florence','Dauphinais','3701 Riverside Dr #907','Windsor','N8Y 4W5','519-251-1159','Rep to General meeting','2010-02-06 00:48:29','2010-02-06 00:48:29');
+INSERT INTO "vincentians" VALUES(13,'Carol','Lanoue','910 Villaire','Windsor','N8S 2J6','519-944-5298','Secretary','2010-02-06 00:49:06','2010-02-06 00:49:06');
+INSERT INTO "vincentians" VALUES(14,'Vicki','Pawlowski','1011 Parkview','Windsor','','519-944-6710','Treasurer','2010-02-06 00:49:44','2010-02-06 00:49:44');
+INSERT INTO "vincentians" VALUES(15,'Cathie','Bedard','910 Janisse Dr','Windsor','','519-945-6401','','2010-02-06 00:50:14','2010-02-06 00:50:14');
+INSERT INTO "vincentians" VALUES(16,'Lisa','Quenneville','7555 Riverside Dr','Windsor','N8S 1C8','519-974-9125','','2010-02-06 00:51:11','2010-02-06 00:51:11');
+INSERT INTO "vincentians" VALUES(17,'Denise','Morneau','1140 Coventry Court','Windsor','N8S 2W9','519-945-0494','','2010-02-06 00:51:56','2010-02-06 00:51:56');
+INSERT INTO "vincentians" VALUES(18,'Anne Marie','Brode','287 Esdras Pl','Windsor','','519-948-9868','','2010-02-06 00:52:30','2010-02-06 00:52:30');
+INSERT INTO "vincentians" VALUES(19,'Bob','Marchand','211 St. Louis','Windsor','N8S 2K2','519-974-6047','','2010-02-06 00:53:07','2010-02-06 00:53:07');
+INSERT INTO "vincentians" VALUES(20,'Mike ','Lemire','239 Jefferson','Windsor','N8S 2P5','519-948-8588','','2010-02-06 00:53:50','2010-02-06 00:53:50');
+INSERT INTO "vincentians" VALUES(21,'Kevin','Masterson','275 Buckingham','Windsor','N8S 2C5','519-945-0840','','2010-02-06 00:54:26','2010-02-06 00:54:26');
+INSERT INTO "vincentians" VALUES(22,'Kaye','Fawdry','PH8-3701 Riverside Dr','Windsor','N8Y 4W5','519-948-6524','','2010-02-06 00:55:10','2010-02-06 00:55:10');
+INSERT INTO "vincentians" VALUES(23,'John','Bellis','276 Ford Blvd','Windsor','','519-944-8857','','2010-02-06 00:55:44','2010-02-06 00:55:44');
+INSERT INTO "vincentians" VALUES(24,'Jerome','Tschirhart','1066 Belleperche','Windsor','','519-945-3177','','2010-02-06 00:56:13','2010-02-06 00:56:13');
+INSERT INTO "vincentians" VALUES(25,'Miora','Sosa','1208 Cottage Pl','Windsor','','519-251-9772','','2010-02-06 00:56:41','2010-02-06 00:56:41');
+INSERT INTO "vincentians" VALUES(26,'Helen','O''Connor','1019 Coventry Court','Windsor','N8S 2W6','519-945-6274','','2010-02-06 00:57:20','2010-02-06 00:57:20');
+INSERT INTO "vincentians" VALUES(27,'Godfrey','Janisse','4747 Riverside Dr #202','Windsor','N8Y 1B9','519-974-0255','','2010-02-06 00:58:02','2010-02-06 00:58:02');
+INSERT INTO "vincentians" VALUES(28,'Sister','Florian','1200 George Ave. #3','Windsor','','519-251-8351','','2010-02-13 00:16:24','2010-02-16 18:09:28');
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");

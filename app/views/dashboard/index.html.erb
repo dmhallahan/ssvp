@@ -1,0 +1,26 @@
+
+<table>
+<tr>
+<td style="width: 800px; border-right: 1px solid #E5E1D8;">
+<p>To prepare for a delivery day, just follow these few steps</p>
+<ul>
+<li>Create any new <%= link_to 'Recipients', recipients_path %> that need food.</li>
+<li>Create any new volunteers that will be delivering food, known as <%= link_to 'Vincentians', vincentians_path %>.</li>
+<li>Create new <%= link_to 'Deliveries', deliveries_path %>  for recipients that are getting food this week.</li>
+<li> Assign Vincentians to each delivery. This will create <%=link_to 'Teams', team_path('new') %>.</li>
+<li>Print the <%= link_to 'Admin Report', 'deliveries/admin_report.pdf', :target => "_blank" %> and <%= link_to 'Delivery Report', 'deliveries/delivery_report.pdf', :target => "_blank" %>.</li>
+</ul>
+<p class="small">The <b>Admin Report</b> is used to record the number of bags packed on the delivery day.</p>
+<p class="small">The <b>Delivery Report</b> provides delivery information to the delivery team about the recipient.</p>
+<p class="small">The <b>Central Report</b> is the history of the deliveries over the previous weeks.</p>
+</td>
+
+
+
+<td style="padding: 30px;">
+<ul>
+<li>Print the <%= link_to 'Report for Central', 'deliveries/central_report.pdf', :target => "_blank"%>.</li>
+</ul>
+</td>
+</tr>
+</table>

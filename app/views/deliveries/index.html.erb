@@ -1,0 +1,48 @@
+
+<script type="text/javascript">
+	jQuery(function() {
+		jQuery("#datepicker").datepicker();
+	});
+</script>
+
+
+
+<div style="float: left; margin-right: 30px;">
+<%= jqgrid("Deliveries", "deliveries", "/deliveries",
+	[
+		{ :field => "delivery_date", :label => "Delivery Date", :editable => true, :editoptions => { :defaultValue => this_saturday },
+        :formoptions => { :rowpos => 1, :elmsuffix => " Required" }, :editrules => { :required => true }   },
+    { :field => "recipient_id", :label => "Recipient", :editable => true, :edittype => "select",
+                  :editoptions => { :data => [Recipient.all, :id, :full_name] },
+                  :formoptions => { :rowpos => 2, :elmsuffix => " Required" }, :editrules => { :required => true }   },
+		{ :field => "comment", :label => "Comment", :editable => true, :width => 300, :formoptions => { :rowpos => 3 },
+                          :edittype => "textarea", :editoptions => { :rows => 5, :cols => 35}    },
+		{ :field => "bags", :label => "Bags", :editable => true, :width=> 35, :formoptions => { :rowpos => 4 } },
+
+	],
+	{ :add => true, :edit => true, :inline_edit => false, :delete => true, :edit_url => "/deliveries/post_data", 
+    :error_handler => "afterSubmit", :sort_column => "delivery_date", :sort_order => 'desc', :rows_per_page => 100, 
+    :height => 370, :rownumbers => true  }) %>
+</div>
+
+<div style="float: left; width: 244px;">
+  <div style="margin-bottom: 20px;" id="datepicker"></div>
+  <div class="bubble" style="margin: 0;">
+    <div><p class="bubble-head" style="width: 233px;">Print</p></div>
+    <p class="bubble-body">
+    <%= link_to 'Admin Report', :controller => 'deliveries', :action => 'admin_report.pdf', :target => 'blank' %><br>
+    <%= link_to 'Delivery Report', :controller => 'deliveries', :action => 'delivery_report.pdf', :target => 'blank'  %><br>
+    <%= link_to 'Central Report', :controller => 'deliveries', :action => 'central_report.pdf', :target => 'blank'  %>
+    </p>
+  </div>
+  
+    <div class="bubble" style="margin: 20px 0 0 0;">
+    <div><p class="bubble-head" style="width: 233px;">Map</p></div>
+    <p class="bubble-body">
+    <%= link_to 'Map Upcoming Deliveries', :controller => 'deliveries', :action => 'map' %>
+    </p>
+  </div>
+</div>
+
+
+

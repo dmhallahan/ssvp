@@ -1,0 +1,54 @@
+
+
+<html>
+  <head>
+    
+    <% if RAILS_ROOT == 'c:/Rails/ssvp' %>
+      <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script>
+    <% else %>
+      <script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAKxdghs44-6Zbwux-M2j8PxQM_5f4oJ3bX2DkBRFzPOOnN9rvxhRVhIPXANGZpGerQlbk-Qjqi8TWfQ" type="text/javascript"></script>
+    <%end%>
+    
+    
+    <%= javascript_include_tag 'google_map_deliveries' %>
+    <script type="text/javascript">
+    
+    var default_origin = new GLatLng(42.3261832, -82.9769395); //change this to coord of origin
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(default_origin, 13);
+        map.enableScrollWheelZoom();
+        var zoom = new GSmallZoomControl();
+        map.addControl(zoom);
+		
+        //Call function in google_map_deliveries library
+        drawPolygon(); 
+        
+      <% @info.each do |recipient|%>
+        var gll = new GLatLng( <%=recipient[:lat] %> , <%= recipient[:lon] %> );
+    		var marker = new GMarker(gll);
+        map.addOverlay(marker);
+        var content = "<b><%=recipient[:name]%></b><br><p><%= recipient[:location] %></p>";
+        marker.bindInfoWindowHtml(content);
+      <% end %>
+      }
+    }
+    
+    </script>
+    
+    <title>Map This Week's Deliveries</title>
+  </head>
+
+  <body onload="initialize()"; onunload="GUnload()">
+    <div id="map_canvas" style="width: 600px; height: 600px"></div>
+    <div style="float: left;"><%=link_to_function 'Print', "window.print()" %></div>
+  </body>
+  
+</html>
+
+
+
+
+

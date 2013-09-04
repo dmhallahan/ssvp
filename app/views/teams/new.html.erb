@@ -1,0 +1,93 @@
+<script>
+ jQuery(document).ready(function() { //required for jQuery operation
+ 
+   jQuery("#create_button").click(function() {        //grabs all the selected rows, converts them to an object, serializes them for submission to the server
+     var vin_ids = jQuery("#vincentians").getGridParam('selarrrow');
+     var del_ids = jQuery("#delivery").getGridParam('selarrrow');
+     var obj = {};
+     
+     for (var i in vin_ids ) { obj["vin_id"+i] = vin_ids[i] };
+     for (var j in del_ids ) { obj["del_id"+j] = del_ids[j] };
+         
+     var params = jQuery.param(obj);
+     
+     jQuery.post("/teams/create", params, null, "script");  
+     return false; 
+   });
+ });
+</script>
+
+  <% content_for :instructions do %>
+    <div class="text">Create teams and assign their recipients in three steps.</div>
+  <% end %>
+
+
+<table style="padding: 10px;">
+<tr><td>
+<p>First, choose the members of the team:</p>
+<%= jqgrid("Vincentians", "vincentians", "/teams/vincentians_select",
+	[
+    { :field => "first_name", :label => "First Name", :editable => false, :width => 100 },
+    { :field => "last_name", :label => "Last Name", :editable => false, :width => 100 },
+    { :field => "notes", :label => "Notes", :editable => false, :width => 350 }
+	],
+ { :multi_selection => true, :rownumbers => true, :rows_per_page => 100, :sort_column => "first_name", :sort_order => 'asc'}
+) %>
+</td>
+<td style="width: 430px;">
+<div class = "bubble" style="margin: 0 0 0 30px;">
+  <div><p class="bubble-head" style="margin: 0; width: 390px;">Print</p></div>
+  <p class="bubble-body" style="margin: 0; width: 390px;">
+   <%= link_to 'Admin Report', :controller => 'deliveries', :action => 'admin_report.pdf' %><br>
+    <%= link_to 'Delivery Report', :controller => 'deliveries', :action => 'delivery_report.pdf' %><br>
+    <%= link_to 'Report for Central', :controller => 'deliveries', :action => 'central_report.pdf' %>
+  </p>
+</div>
+</td>
+</tr>
+
+</table>
+
+<table style="padding: 10px;">
+<tr>
+<td>
+<p>Second, choose the recipients to which the team will deliver:</p>
+<%= jqgrid("Deliveries", "delivery", "/teams/new",
+	[
+		{ :field => "delivery_date", :label => "Delivery Date", :editable => false, :width => 100 },
+    { :field => "recipient", :label => "Recipient", :editable => false, :sortable => false },
+    { :field => "comment", :label => "Comment", :editable => false, :width => 300 }
+	],
+	{ :master_details => true, :details_url => "/teams/vincentians", :details_caption => "For Delivery", 
+          :sort_column => "delivery_date", :sort_order => 'desc', :rows_per_page => 100,  
+          :rownumbers => true, :multi_selection => true, :height => 200 } ) %>
+</td>
+
+
+
+<td>
+<p>Select a delivery in the table to the left to see which team is assigned.</p>
+<%= jqgrid("Vincentians", "delivery_details", "/teams/vincentians",
+	[
+    { :field => "first_name", :label => "First Name", :editable => false, :width => 100 },
+    { :field => "last_name", :label => "Last Name", :editable => false, :width => 100 },
+    { :field => "notes", :label => "Notes", :editable => false, :width => 250 }
+	],
+  	{ :rownumbers => true, :sort_column => "first_name", :sort_order => 'asc', :height => 200 }
+) %>
+</td>
+</tr>
+<tr><td>
+<p>Third, click Create to create the team:</p>
+    <%= submit_tag 'Create', :id => 'create_button' %>
+</td>
+<td>
+Click <%= link_to 'Edit teams', teams_path %> if you make want to change the teams around.
+    
+</td>
+</tr>
+</table>
+
+
+
+

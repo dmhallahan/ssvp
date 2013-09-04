@@ -1,0 +1,24 @@
+  <% content_for :instructions do %>
+    <div class="text">Create vincentians by clicking the '+' sign below the table.</div>
+  <% end %>
+
+
+<%= jqgrid("Vincentians", "vincentians", "/vincentians",
+	[
+		{ :field => "first_name", :label => "First Name", :editable => true, :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true } },
+		{ :field => "last_name", :label => "Last Name", :editable => true, :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true } },
+		{ :field => "phone_number", :label => "Phone", :editable => true, :formoptions => { :elmsuffix => " Required" }, :editrules => { :required => true } },
+    { :field => "address", :label => "Address", :editable => true },
+    { :field => "city", :label => "City", :editable => true },
+    { :field => "postal_code", :label => "Postal Code", :editable => true },
+    { :field => "notes", :label => "Notes", :editable => true, :edittype => "textarea", :editoptions => { :rows => 5, :cols => 30 },   }
+	],
+	{ :add => true, :edit => true, :inline_edit => false, :delete => true, 
+    :edit_url => "/vincentians/post_data", :error_handler => "afterSubmit",
+        :rows_per_page => 100, :height => 300, :sort_column => "last_name", :sort_order => 'asc',
+            :rownumbers => true }
+) %>
+<br/>
+
+
+		
