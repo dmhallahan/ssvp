@@ -204,3 +204,73 @@ Completed in 5922ms (View: 5328, DB: 254) | 200 OK [http://localhost/deliveries/
 Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-04 00:15:11) [GET]
   Parameters: {"q"=>"1", "_search"=>"false", "sidx"=>"delivery_date", "rows"=>"100", "sord"=>"desc", "page"=>"1", "nd"=>"1378268111848"}
 Completed in 100ms (View: 0, DB: 29) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378268111848&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing DashboardController#index (for 127.0.0.1 at 2013-09-04 00:38:31) [GET]
+Rendering template within layouts/application
+Rendering dashboard/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/dashboard]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-04 00:38:32) [GET]
+Rendering template within layouts/application
+Rendering recipients/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/recipients]
+
+
+Processing RecipientsController#index (for 127.0.0.1 at 2013-09-04 00:38:32) [GET]
+  Parameters: {"rows"=>"100", "sidx"=>"last_name", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269512646", "sord"=>"asc"}
+Completed in 42ms (View: 0, DB: 6) | 200 OK [http://localhost/recipients?q=1&_search=false&nd=1378269512646&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing RecipientsController#deliveries (for 127.0.0.1 at 2013-09-04 00:38:32) [GET]
+  Parameters: {"rows"=>"10", "sidx"=>"delivery_date", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269512694", "sord"=>"desc"}
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/recipients/deliveries?q=1&_search=false&nd=1378269512694&rows=10&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-04 00:38:33) [GET]
+Rendering template within layouts/application
+Rendering vincentians/index
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/vincentians]
+
+
+Processing VincentiansController#index (for 127.0.0.1 at 2013-09-04 00:38:33) [GET]
+  Parameters: {"rows"=>"100", "sidx"=>"last_name", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269513318", "sord"=>"asc"}
+Completed in 10ms (View: 0, DB: 1) | 200 OK [http://localhost/vincentians?q=1&_search=false&nd=1378269513318&rows=100&page=1&sidx=last_name&sord=asc]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-04 00:38:33) [GET]
+Rendering template within layouts/application
+Rendering deliveries/index
+Completed in 23ms (View: 14, DB: 6) | 200 OK [http://localhost/deliveries]
+
+
+Processing DeliveriesController#index (for 127.0.0.1 at 2013-09-04 00:38:34) [GET]
+  Parameters: {"rows"=>"100", "sidx"=>"delivery_date", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269514101", "sord"=>"desc"}
+Completed in 135ms (View: 0, DB: 68) | 200 OK [http://localhost/deliveries?q=1&_search=false&nd=1378269514101&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-04 00:38:35) [GET]
+Rendering template within layouts/application
+Rendering teams/new
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/teams/new]
+
+
+Processing TeamsController#vincentians_select (for 127.0.0.1 at 2013-09-04 00:38:35) [GET]
+  Parameters: {"rows"=>"100", "sidx"=>"first_name", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269515156", "sord"=>"asc"}
+Completed in 8ms (View: 0, DB: 1) | 200 OK [http://localhost/teams/vincentians_select?q=1&_search=false&nd=1378269515156&rows=100&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#new (for 127.0.0.1 at 2013-09-04 00:38:35) [GET]
+  Parameters: {"rows"=>"100", "sidx"=>"delivery_date", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269515198", "sord"=>"desc"}
+Completed in 63ms (View: 1, DB: 21) | 200 OK [http://localhost/teams/new?q=1&_search=false&nd=1378269515198&rows=100&page=1&sidx=delivery_date&sord=desc]
+
+
+Processing TeamsController#vincentians (for 127.0.0.1 at 2013-09-04 00:38:35) [GET]
+  Parameters: {"rows"=>"10", "sidx"=>"first_name", "_search"=>"false", "page"=>"1", "q"=>"1", "nd"=>"1378269515226", "sord"=>"asc"}
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://localhost/teams/vincentians?q=1&_search=false&nd=1378269515226&rows=10&page=1&sidx=first_name&sord=asc]
+
+
+Processing TeamsController#create (for 127.0.0.1 at 2013-09-04 00:38:38) [POST]
+Rendering teams/create
+Completed in 13ms (View: 1, DB: 9) | 200 OK [http://localhost/teams/create]
